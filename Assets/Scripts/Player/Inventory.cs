@@ -1,14 +1,11 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-
-using UnityEngine;
 
 public class Inventory
 {
     public const int MAX_ITEMS = 3;
-    public int ActiveItemIndex { get; set; } = -1;
     public int ItemsCount => items.Count;
+    public int ActiveItemIndex { get; set; } = -1;
 
     public event Action<int, InventoryItem> ItemAdded;
     public event Action<int> ItemRemoved;
@@ -37,6 +34,18 @@ public class Inventory
             ItemRemoved?.Invoke(items.Count);
 
         return success;
+    }
+
+    public bool TryGetActiveItem(out InventoryItem item)
+    {
+        if (ActiveItemIndex < 0)
+        {
+            item = null;
+            return false;
+        }
+
+        item = items[ActiveItemIndex];
+        return true;
     }
 
     public void InvokeShouldOpenItem3dViewer(int itemIndex)

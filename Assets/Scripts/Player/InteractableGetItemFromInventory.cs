@@ -1,0 +1,31 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+using UnityEngine;
+using UnityEngine.Events;
+
+public class InteractableGetItemFromInventory : MonoBehaviour
+{
+    [SerializeField] private string allowedItemName;
+    [SerializeField] private UnityAction action;
+    private Inventory playerInventory;
+
+    void Awake()
+    {
+        playerInventory = GameObject.FindWithTag(Player.TAG).GetComponent<Player>().Inventory;
+    }
+
+
+
+    void OnMouseDown()
+    {
+        if (!playerInventory.TryGetActiveItem(out var item))
+            return;
+
+        if (item.ItemName != allowedItemName)
+            return;
+
+        action?.Invoke();
+    }
+}
