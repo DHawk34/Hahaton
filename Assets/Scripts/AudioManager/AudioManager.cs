@@ -6,8 +6,10 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public Sound[] musicSounds, sfxSounds;
-    public AudioSource musicSource, sfxSource;
+    public Sound[] musicSounds, sfxSounds, voiceSounds;
+    public AudioSource musicSource, sfxSource, voiceSource;
+
+    public float overallVolume;
 
     private void Awake()
     {
@@ -51,24 +53,72 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void ToggleMusic()
+    public void PlayVoice(string name)
     {
-        musicSource.mute = !musicSource.mute;
+        Sound s = Array.Find(sfxSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("SFX not founds");
+        }
+        else
+        {
+            sfxSource.PlayOneShot(s.clip);
+        }
     }
-    
-    public void ToggleSFX()
+
+    public void setOverallVolume(float volume)
     {
-        sfxSource.mute = !sfxSource.mute;
+        overallVolume = volume;
+        //Костыль
+        MusicVolume(musicSource.volume);
+        SFXVolume(sfxSource.volume);
+        VoiceVolume(voiceSource.volume);
     }
 
     public void MusicVolume(float volume)
     {
-        musicSource.volume = volume;
+        musicSource.volume = volume * overallVolume;
     }
 
     public void SFXVolume(float volume)
     {
-        sfxSource.volume = volume;
+        sfxSource.volume = volume * overallVolume;
     }
+
+    public void VoiceVolume(float volume)
+    {
+        voiceSource.volume = volume * overallVolume;
+    }
+
+    // public float GetMusicVolume()
+    // {
+    //     return musicSource.volume;
+    // }
+
+    // public float GetSFXVolume()
+    // {
+    //     return sfxSource.volume;
+    // }
+
+    // public float GetVoicesVolume()
+    // {
+    //     return voiceSource.volume;
+    // }
+
+    //     public void ToggleMusic()
+    // {
+    //     musicSource.mute = !musicSource.mute;
+    // }
+    
+    // public void ToggleSFX()
+    // {
+    //     sfxSource.mute = !sfxSource.mute;
+    // }
+
+    // public void ToggleVoice()
+    // {
+    //     voiceSource.mute = !sfxSource.mute;
+    // }
 
 }
