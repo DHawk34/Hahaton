@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class InteractableGetItemFromInventory : MonoBehaviour
 {
     [SerializeField] private string allowedItemName;
-    [SerializeField] private UnityAction action;
+    [SerializeField] private UnityEvent action;
     private Inventory playerInventory;
 
     void Awake()
