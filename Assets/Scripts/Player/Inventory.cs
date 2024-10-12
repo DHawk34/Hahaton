@@ -6,29 +6,42 @@ using UnityEngine;
 
 public class Inventory
 {
-    public int MaxItems { get; }
+    public const int MAX_ITEMS = 3;
+    public int ActiveItemIndex { get; set; } = -1;
+    public int ItemsCount => items.Count;
 
-    private readonly List<InventoryItem> items = new(5);
+    public event Action<int, InventoryItem> ItemAdded;
+    public event Action<int> ItemRemoved;
+    public event Action<InventoryItem> ShouldOpenItem3dViewer;
 
-    public Inventory(int capacity)
-    {
-        this.MaxItems = capacity;
-        this.items = new(capacity);
-    }
+    private readonly List<InventoryItem> items = new(MAX_ITEMS);
 
 
 
     public bool TryAddItem(InventoryItem item)
     {
-        if (items.Count >= MaxItems)
+        if (items.Count >= MAX_ITEMS)
             return false;
 
         items.Add(item);
+        ItemAdded?.Invoke(items.Count - 1, item);
+
         return true;
     }
 
     public bool TryRemoveItem(InventoryItem item)
     {
-        return items.Remove(item);
+        bool success = items.Remove(item);
+
+        if (success)
+            ItemRemoved?.Invoke(items.Count);
+
+        return success;
+    }
+
+    public void InvokeShouldOpenItem3dViewer(int itemIndex)
+    {
+        if (items.Count > itemIndex)
+            ShouldOpenItem3dViewer?.Invoke(items[itemIndex]);
     }
 }
