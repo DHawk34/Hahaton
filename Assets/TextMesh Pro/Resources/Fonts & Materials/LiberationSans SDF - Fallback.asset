@@ -807,7 +807,6 @@ MonoBehaviour:
     m_Height: 511
   - m_X: 99
     m_Y: 287
-    m_Width: 28
     m_Height: 2
   - m_X: 178
     m_Y: 431
@@ -846,8 +845,6 @@ MonoBehaviour:
     PointSize: 86
     Scale: 1
     CharacterCount: 250
-    LineHeight: 98.90625
-    Baseline: 0
     Ascender: 77.84375
     CapHeight: 59.1875
     Descender: -18.21875
@@ -1372,7 +1369,6 @@ MonoBehaviour:
         m_GlyphIndex: 963
         m_GlyphValueRecord:
           m_XPlacement: 0
-          m_YPlacement: 0
           m_XAdvance: -0.96875
           m_YAdvance: 0
       m_SecondAdjustmentRecord:
@@ -1416,8 +1412,6 @@ MonoBehaviour:
     - m_FirstAdjustmentRecord:
         m_GlyphIndex: 1003
         m_GlyphValueRecord:
-          m_XPlacement: 0
-          m_YPlacement: 0
           m_XAdvance: 1.890625
           m_YAdvance: 0
       m_SecondAdjustmentRecord:
