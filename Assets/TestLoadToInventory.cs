@@ -14,7 +14,7 @@ public class TestLoadToInventory : MonoBehaviour
         player = GameObject.FindWithTag(Player.TAG).GetComponent<Player>();
 
         InputManager.ToggleActionMap(InputManager.Input.Player);
-        InputManager.Input.Player.Interact.performed += Interact_performed;
+        InputManager.Input.Debug.Interact.performed += Interact_performed;
     }
 
     private void Interact_performed(InputAction.CallbackContext ctx)

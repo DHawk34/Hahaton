@@ -37,12 +37,4 @@ public static class InputManager
 		Input.Disable();
 		Input.Debug.Enable();
 	}
-
-	public static void ToggleMovementInput(bool enabled)
-	{
-		if (enabled)
-			Input.Player.Move.Enable();
-		else
-			Input.Player.Move.Disable();
-	}
 }
