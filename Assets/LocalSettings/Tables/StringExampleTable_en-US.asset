@@ -22,6 +22,10 @@ MonoBehaviour:
     m_Localized: Hi guys
     m_Metadata:
       m_Items: []
+  - m_Id: 29638205214720
+    m_Localized: HHHHHHHHHHHHHHHHH
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

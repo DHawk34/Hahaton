@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
         IsUsingGamepad = obj.currentControlScheme == input.GamepadScheme.name;
 
         // TODO: хз насчет .Reset()
-        input.Player.AbilityCrosshair.Reset();
+        //input.Player.AbilityCrosshair.Reset();
 
         Debug.LogWarning($"Controlls changed {obj.currentControlScheme}!");
     }
