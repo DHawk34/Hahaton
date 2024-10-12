@@ -23,6 +23,9 @@ public class MenuHandler : MonoBehaviour
 
     public void ToggleSettings()
     {
+        //Как выглядит аудиоменджер
+        AudioManager.Instance.PlaySFX("TestClickSound");
+        
         optionsPanel.SetActive(!optionsPanel.activeSelf);
 
         Button[] buttons = mainMenuButtons.GetComponentsInChildren<Button>();
