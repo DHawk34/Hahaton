@@ -76,42 +76,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""id"": ""2f3dbee2-1201-45eb-a29e-11316c0ece98"",
             ""actions"": [
                 {
-                    ""name"": ""SaveTest"",
-                    ""type"": ""Button"",
-                    ""id"": ""ae5672ac-c329-4dd7-97ac-b4223a2393ba"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""LoadTest"",
-                    ""type"": ""Button"",
-                    ""id"": ""c4f77423-021d-4cb5-a2cb-5c0ea00ee5b7"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""ShowEnabledActionMaps"",
-                    ""type"": ""Button"",
-                    ""id"": ""4d138fd2-fbb7-49e5-816f-18253735f3e0"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""ReloadLevel"",
-                    ""type"": ""Button"",
-                    ""id"": ""0156763a-ea6b-4612-ade1-6811d79ca412"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""65b71d89-542e-4cd6-9917-92d62b3673c3"",
@@ -124,66 +88,11 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""b190ff36-e93f-4506-94e5-5565c5e541ba"",
-                    ""path"": ""<Keyboard>/o"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""SaveTest"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""59b2aecf-352e-4c19-9512-559e6d230ee2"",
-                    ""path"": ""<Keyboard>/p"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""LoadTest"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""850191d3-686f-4c4c-b28d-4c64956df5cc"",
-                    ""path"": ""<Keyboard>/l"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""ShowEnabledActionMaps"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c731484e-3f29-40b6-9444-504bcc7796eb"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""ReloadLevel"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""439b00d9-bc8d-49dd-980e-b8ccd1373196"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",
-                    ""action"": ""Interact"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5f8643fa-f95f-4d95-b1e6-7a5e21fb55c9"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -216,10 +125,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         // Debug
         m_Debug = asset.FindActionMap("Debug", throwIfNotFound: true);
-        m_Debug_SaveTest = m_Debug.FindAction("SaveTest", throwIfNotFound: true);
-        m_Debug_LoadTest = m_Debug.FindAction("LoadTest", throwIfNotFound: true);
-        m_Debug_ShowEnabledActionMaps = m_Debug.FindAction("ShowEnabledActionMaps", throwIfNotFound: true);
-        m_Debug_ReloadLevel = m_Debug.FindAction("ReloadLevel", throwIfNotFound: true);
         m_Debug_Interact = m_Debug.FindAction("Interact", throwIfNotFound: true);
     }
 
@@ -342,19 +247,11 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // Debug
     private readonly InputActionMap m_Debug;
     private List<IDebugActions> m_DebugActionsCallbackInterfaces = new List<IDebugActions>();
-    private readonly InputAction m_Debug_SaveTest;
-    private readonly InputAction m_Debug_LoadTest;
-    private readonly InputAction m_Debug_ShowEnabledActionMaps;
-    private readonly InputAction m_Debug_ReloadLevel;
     private readonly InputAction m_Debug_Interact;
     public struct DebugActions
     {
         private @PlayerControls m_Wrapper;
         public DebugActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @SaveTest => m_Wrapper.m_Debug_SaveTest;
-        public InputAction @LoadTest => m_Wrapper.m_Debug_LoadTest;
-        public InputAction @ShowEnabledActionMaps => m_Wrapper.m_Debug_ShowEnabledActionMaps;
-        public InputAction @ReloadLevel => m_Wrapper.m_Debug_ReloadLevel;
         public InputAction @Interact => m_Wrapper.m_Debug_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Debug; }
         public void Enable() { Get().Enable(); }
@@ -365,18 +262,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_DebugActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_DebugActionsCallbackInterfaces.Add(instance);
-            @SaveTest.started += instance.OnSaveTest;
-            @SaveTest.performed += instance.OnSaveTest;
-            @SaveTest.canceled += instance.OnSaveTest;
-            @LoadTest.started += instance.OnLoadTest;
-            @LoadTest.performed += instance.OnLoadTest;
-            @LoadTest.canceled += instance.OnLoadTest;
-            @ShowEnabledActionMaps.started += instance.OnShowEnabledActionMaps;
-            @ShowEnabledActionMaps.performed += instance.OnShowEnabledActionMaps;
-            @ShowEnabledActionMaps.canceled += instance.OnShowEnabledActionMaps;
-            @ReloadLevel.started += instance.OnReloadLevel;
-            @ReloadLevel.performed += instance.OnReloadLevel;
-            @ReloadLevel.canceled += instance.OnReloadLevel;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
@@ -384,18 +269,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IDebugActions instance)
         {
-            @SaveTest.started -= instance.OnSaveTest;
-            @SaveTest.performed -= instance.OnSaveTest;
-            @SaveTest.canceled -= instance.OnSaveTest;
-            @LoadTest.started -= instance.OnLoadTest;
-            @LoadTest.performed -= instance.OnLoadTest;
-            @LoadTest.canceled -= instance.OnLoadTest;
-            @ShowEnabledActionMaps.started -= instance.OnShowEnabledActionMaps;
-            @ShowEnabledActionMaps.performed -= instance.OnShowEnabledActionMaps;
-            @ShowEnabledActionMaps.canceled -= instance.OnShowEnabledActionMaps;
-            @ReloadLevel.started -= instance.OnReloadLevel;
-            @ReloadLevel.performed -= instance.OnReloadLevel;
-            @ReloadLevel.canceled -= instance.OnReloadLevel;
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
@@ -432,10 +305,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     }
     public interface IDebugActions
     {
-        void OnSaveTest(InputAction.CallbackContext context);
-        void OnLoadTest(InputAction.CallbackContext context);
-        void OnShowEnabledActionMaps(InputAction.CallbackContext context);
-        void OnReloadLevel(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
     }
 }
