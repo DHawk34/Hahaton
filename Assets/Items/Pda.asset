@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Pda
   m_EditorClassIdentifier: 
   itemName: Pda
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 20e361c7ef427314681e0b313dcae235, type: 3}
   model3D: {fileID: 6831757462583092075, guid: 10d819e312f35af4db2f05f42592e99d, type: 3}
-  quanternion: {x: 0, y: 0, z: 0, w: 1}
+  quanternion: {x: 0, y: 0.9659258, z: 0, w: -0.25881904}

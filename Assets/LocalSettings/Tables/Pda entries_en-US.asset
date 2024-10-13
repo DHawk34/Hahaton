@@ -19,15 +19,30 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 11484872704
-    m_Localized: hi
+    m_Localized: The Persifal Space Chamber of Commerce has been suffering incredible
+      losses in recent years. Due to escalating conflicts with competitors such as
+      Golden Path, the company has lost 5 flagships with a total cargo worth over
+      500 trillion ceres. They are said to have fallen into the Pirate Nebula, however
+      the exact details on this matter remain unknown.
     m_Metadata:
       m_Items: []
   - m_Id: 20439711744
-    m_Localized: 1231123
+    m_Localized: Speaking of losses, it was recently revealed that the Persifal Space
+      Chamber of Commerce lost an entire station in the Toon system. It is unknown
+      if there are any survivors and what is going on there, as the presumed cause
+      of the station's destruction is believed to be... [Communication lost]
     m_Metadata:
       m_Items: []
   - m_Id: 23967121408
-    m_Localized: zzzzzzzzz
+    m_Localized: "Sunmill blade rotation adjustment data.\r\nIf there is a class
+      G star near you, you must configure all equipment to produce as much energy
+      as possible. To do this, you need to enter the following configuration files:\r\nSP-001:
+      90\xB0\r\nSP-002: 90\xB0\r\nSP-003: 180\xB0\r\nIf there is a Class A star near
+      you, you only need to deploy a portion of the solar panels. To do this, you
+      need to enter the following configuration files:\r\nSP-001: 45\xB0\r\nSP-002:
+      270\xB0\r\nSP-003: 225\xB0\r\nIf there is a dying star near you, you MUST secure
+      the equipment at all costs. To do this, you will need to make the following
+      configuration files:\r\nSP-001: 225\xB0\r\nSP-002: 180\xB0\r\nSP-003: 225\xB0\r"
     m_Metadata:
       m_Items: []
   references:
