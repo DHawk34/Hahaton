@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Music : MonoBehaviour
 {
     public UnityEvent Restart; // Событие для изменения состояния кнопок
-    
+
     private int[] winningHand = new int[] {4, 2, 3, 1, 5};
     private int[] currentHand = new int[] {0, 0, 0, 0, 0};
     private int currentHandCounter = 0;
@@ -19,6 +19,7 @@ public class Music : MonoBehaviour
 
         if (Restart == null)
             Restart = new UnityEvent();
+        
     
     }
 
