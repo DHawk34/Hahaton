@@ -13,12 +13,6 @@ public class RoomControls : MonoBehaviour
     private Camera mainCamera;
 
     [SerializeField]
-    private Transform dialog;
-
-    [SerializeField]
-    private Transform inventory;
-
-    [SerializeField]
     private FadeInOut fadeInOut;
 
     [SerializeField]
@@ -100,8 +94,6 @@ public class RoomControls : MonoBehaviour
         if (roomTransform)
         {
             mainCamera.transform.position = (Vector2)roomTransform.position;
-            dialog.transform.position = (Vector2)roomTransform.position;
-            inventory.transform.position = (Vector2)roomTransform.position;
         }
     }
 

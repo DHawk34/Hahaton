@@ -35,6 +35,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""81df5a80-3ea9-44b5-8c89-4daa5c494893"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -46,6 +55,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard and Mouse"",
                     ""action"": ""LeftClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2f9833f5-0adc-4860-9ee7-6101db4701fd"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard and Mouse"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -193,6 +213,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_LeftClick = m_Player.FindAction("LeftClick", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         // Debug
         m_Debug = asset.FindActionMap("Debug", throwIfNotFound: true);
         m_Debug_SaveTest = m_Debug.FindAction("SaveTest", throwIfNotFound: true);
@@ -268,11 +289,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_LeftClick;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
         public PlayerActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @LeftClick => m_Wrapper.m_Player_LeftClick;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -285,6 +308,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @LeftClick.started += instance.OnLeftClick;
             @LeftClick.performed += instance.OnLeftClick;
             @LeftClick.canceled += instance.OnLeftClick;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -292,6 +318,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @LeftClick.started -= instance.OnLeftClick;
             @LeftClick.performed -= instance.OnLeftClick;
             @LeftClick.canceled -= instance.OnLeftClick;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -399,6 +428,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnLeftClick(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IDebugActions
     {
