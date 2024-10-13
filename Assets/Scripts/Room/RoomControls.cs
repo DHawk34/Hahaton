@@ -71,7 +71,7 @@ public class RoomControls : MonoBehaviour
         fadeInOut.FadeOut();
     }
 
-    void goToRoom(Transform roomTransform)
+    public void goToRoom(Transform roomTransform)
     {
         if (roomTransform)
         {

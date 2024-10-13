@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: AI_PowerOnHeadPress_Background_en-US
+  m_Name: AI_PowerOnBodyPress_Background_ru-RU
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: en-US
+    m_Code: ru-RU
   m_SharedData: {fileID: 11400000, guid: 9517908debc49584b9c6353198f59800, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
   - m_Id: 5424103424
-    m_Localized: You want me to hum it again? All right!
+    m_Localized: "\u0425\u043E\u0447\u0435\u0448\u044C, \u0447\u0442\u043E\u0431
+      \u044F \u0441\u043D\u043E\u0432\u0430 \u043D\u0430\u043F\u0435\u043B\u0430?
+      \u0425\u043E\u0440\u043E\u0448\u043E!"
     m_Metadata:
       m_Items: []
   references:

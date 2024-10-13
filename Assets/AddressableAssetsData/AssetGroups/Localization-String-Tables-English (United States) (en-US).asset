@@ -30,7 +30,7 @@ MonoBehaviour:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 20a1678e3cd69534c812e8c6e8c0a0c4
-    m_Address: AI_PowerOnHeadPress_Background_en-US
+    m_Address: AI_PowerOnBodyPress_Background_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US

@@ -66,7 +66,7 @@ MonoBehaviour:
     - Locale-ru-RU
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b12a9671ff983cb43949adc5fbcf03d0
-    m_Address: AI_PowerOnHeadPress_Background_ru-RU
+    m_Address: AI_PowerOnBodyPress_Background_ru-RU
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru-RU
