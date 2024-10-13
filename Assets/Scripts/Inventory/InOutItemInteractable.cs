@@ -16,12 +16,12 @@ public class InOutItemInteractable : MonoBehaviour
 
     private Inventory playerInventory;
 
-    private InventoryItem item;
+    public InventoryItem item;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     [SerializeField] private Sprite sprite;
 
-    private bool slotTaken = false;
+    public bool slotTaken;
 
     void Awake()
     {
