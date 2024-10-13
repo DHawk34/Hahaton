@@ -33,11 +33,6 @@ public class InventoryUI : MonoBehaviour
 
 
 
-    public void ToggleActive()
-    {
-        this.gameObject.SetActive(!this.gameObject.activeSelf);
-    }
-
     public void SetActiveItemIndex(int index)
     {
         // clamp max
