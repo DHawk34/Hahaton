@@ -22,7 +22,7 @@ public class Item3dViewer : MonoBehaviour, IDragHandler
         if (obj != null)
             Destroy(obj);
 
-        obj = Instantiate(item.Model3D, new Vector3(100, 100, 100), Quaternion.identity);
+        obj = Instantiate(item.Model3D, new Vector3(100, 100, 100), item.Quanternion);
         this.wrapper.SetActive(true);
     }
 
