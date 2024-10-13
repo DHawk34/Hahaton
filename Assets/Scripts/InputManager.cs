@@ -10,8 +10,6 @@ public static class InputManager
     public static PlayerControls Input { get; } = new PlayerControls();
     public static event Action<InputActionMap> OnActionMapChanged;
 
-    //public static BindingList<InputActionMap> AlwaysActiveMaps { get; } = new BindingList<InputActionMap>();
-
     static InputManager()
     {
         Input.Debug.Enable();
