@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OpenDrawer : MonoBehaviour
 {
-    private bool haveScrewdriver = true;
+    [SerializeField] private bool haveScrewdriver = true;
 
     [SerializeField] private GameObject drawer;
 

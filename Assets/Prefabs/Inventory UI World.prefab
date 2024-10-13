@@ -1079,12 +1079,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 20
+  m_fontSizeMax: 28
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2339910184463137781
@@ -2885,8 +2885,8 @@ MonoBehaviour:
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 8
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -3509,8 +3509,9 @@ GameObject:
   - component: {fileID: 277090922214049472}
   - component: {fileID: 8439795828336688901}
   - component: {fileID: 4911710318666257153}
+  - component: {fileID: 3884551403421413328}
   m_Layer: 0
-  m_Name: Inventory UI
+  m_Name: Inventory UI World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3596,3 +3597,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e531d73e273b2429bf386fe8cf4a0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3884551403421413328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9072974892182151535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38dd6861249029439387fa7b7a315bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsToAdd:
+  - {fileID: 11400000, guid: 6b7e99b587bf6ff42aa3e2bbc93c2ee4, type: 2}
