@@ -1,12 +1,10 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
+
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Localization.SmartFormat.PersistentVariables;
 
-public class InteractableGetItemFromInventory : MonoBehaviour
+public class InOutItemInteractable : MonoBehaviour
 {
     [SerializeField] private string[] allowedItemName;
     public UnityEvent action;
@@ -38,9 +36,9 @@ public class InteractableGetItemFromInventory : MonoBehaviour
             if (!playerInventory.TryRemoveItem(item))
                 return;
 
-            this.item = item; 
+            this.item = item;
 
-            changeSprite();
+            ChangeSprite();
 
             actionInt?.Invoke(item.ItemName[5] - '0');
 
@@ -51,13 +49,11 @@ public class InteractableGetItemFromInventory : MonoBehaviour
                 return;
 
             item = null;
-
-            changeSprite();
-
+            ChangeSprite();
         }
     }
 
-    void changeSprite()
+    private void ChangeSprite()
     {
         spriteRenderer.sprite = item.Sprite;
     }

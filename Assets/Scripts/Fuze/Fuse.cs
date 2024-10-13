@@ -6,15 +6,15 @@ using UnityEngine;
 public class Fuse : MonoBehaviour
 {
     [SerializeField]
-    private InteractableGetItemFromInventory slot1;
+    private InOutItemInteractable slot1;
 
     [SerializeField]
-    private InteractableGetItemFromInventory slot2;
+    private InOutItemInteractable slot2;
 
     [SerializeField]
-    private InteractableGetItemFromInventory slot3;
+    private InOutItemInteractable slot3;
     [SerializeField]
-    private InteractableGetItemFromInventory slot4;
+    private InOutItemInteractable slot4;
 
     private int[] winningHand = new int[] {2, 1, 3, 4}; //B A C D
     private int[] currentHand = new int[] {0, 0, 0, 0};
