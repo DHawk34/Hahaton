@@ -34,6 +34,8 @@ public class Nails : MonoBehaviour
         if (!allowedItemName.Contains(item.ItemName))
             return;
 
+        AudioManager.Instance.PlaySFX("ScrewDriver");
+
         plate.MinusNail();
 
         spriteRenderer.enabled = false;

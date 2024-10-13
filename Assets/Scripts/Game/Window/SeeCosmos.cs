@@ -23,5 +23,6 @@ public class SeeCosmos : MonoBehaviour
         ReturnButton.SetActive(true);
 
         dialogueSystem.StartDialogue(textTable);
+        AudioManager.Instance.PlaySFX("ShipWindowStars");
     }
 }

@@ -33,6 +33,7 @@ public class Mixer : MonoBehaviour
         {
             dialogueSystem.StartDialogue(stringTable);
             roomControls.goToRoom(newRoom);
+            AudioManager.Instance.PlaySFX("electricSound");
             Debug.Log("WinNNER");
         }
     }

@@ -27,6 +27,7 @@ public class CellArrow : MonoBehaviour
     {
         if (currentState != ArrowCellState.None)
         {
+            AudioManager.Instance.PlaySFX("TestClickSound");
             arrowsManager.SpriteClicker(cellNumber);
         }
     }
