@@ -24,7 +24,7 @@ public class Mixer : MonoBehaviour
     [SerializeField]
     private Transform newRoom;
 
-    private int[] winningHand = new int[] {315, 90, 225};
+    private int[] winningHand = new int[] {225, 180, 225};
 
   
 
