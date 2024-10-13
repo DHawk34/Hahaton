@@ -69,26 +69,26 @@ public class AudioManager : MonoBehaviour
 
     public void setOverallVolume(float volume)
     {
-        overallVolume = volume;
+        // overallVolume = volume;
         //Костыль
-        MusicVolume(musicSource.volume);
-        SFXVolume(sfxSource.volume);
-        VoiceVolume(voiceSource.volume);
+        MusicVolume(volume);
+        SFXVolume(volume);
+        VoiceVolume(volume);
     }
 
     public void MusicVolume(float volume)
     {
-        musicSource.volume = volume * overallVolume;
+        musicSource.volume = volume;
     }
 
     public void SFXVolume(float volume)
     {
-        sfxSource.volume = volume * overallVolume;
+        sfxSource.volume = volume;
     }
 
     public void VoiceVolume(float volume)
     {
-        voiceSource.volume = volume * overallVolume;
+        voiceSource.volume = volume;
     }
 
     // public float GetMusicVolume()

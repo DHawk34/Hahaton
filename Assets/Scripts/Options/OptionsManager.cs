@@ -52,7 +52,8 @@ public class OptionsManager : MonoBehaviour
     {
         float value = overallVolumeSlider.value;
 
-        AudioManager.Instance.overallVolume = value;
+        // AudioManager.Instance.overallVolume = value;
+        AudioManager.Instance.setOverallVolume(value);
         overallVolumeTMP.text = (value * 100).ToString("F0");
         PlayerPrefs.SetFloat("Overall Volume", AudioManager.Instance.overallVolume);
 
