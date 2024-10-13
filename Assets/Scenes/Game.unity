@@ -8354,7 +8354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1266977590
 Transform:
   m_ObjectHideFlags: 0
@@ -9395,6 +9395,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2605156284533875023, guid: 0bbbd07f635d9b449a2360960299a9e4, type: 3}
+      propertyPath: sfxSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605156284533875023, guid: 0bbbd07f635d9b449a2360960299a9e4, type: 3}
+      propertyPath: sfxSounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 869b5529e751b5e4dad76cfa1ca049fe, type: 3}
+    - target: {fileID: 2605156284533875023, guid: 0bbbd07f635d9b449a2360960299a9e4, type: 3}
+      propertyPath: sfxSounds.Array.data[1].name
+      value: ScrewDriver
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605156284533875023, guid: 0bbbd07f635d9b449a2360960299a9e4, type: 3}
+      propertyPath: sfxSounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 91e14557efb5ed944afe2966e0ca994c, type: 3}
+    - target: {fileID: 2605156284533875023, guid: 0bbbd07f635d9b449a2360960299a9e4, type: 3}
+      propertyPath: sfxSounds.Array.data[2].name
+      value: electricSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605156284533875023, guid: 0bbbd07f635d9b449a2360960299a9e4, type: 3}
+      propertyPath: sfxSounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 24210c6ae95c1094f93fe32fcbc6cc29, type: 3}
+    - target: {fileID: 2605156284533875023, guid: 0bbbd07f635d9b449a2360960299a9e4, type: 3}
+      propertyPath: sfxSounds.Array.data[3].name
+      value: ShipWindowStars
+      objectReference: {fileID: 0}
     - target: {fileID: 4936058371102554738, guid: 0bbbd07f635d9b449a2360960299a9e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 914.6586
@@ -9575,7 +9603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1829684476
 RectTransform:
   m_ObjectHideFlags: 0

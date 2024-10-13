@@ -31,7 +31,7 @@ public class Fuse : MonoBehaviour
     private BoxCollider2D slotCollider4;
 
     private int[] winningHand = new int[] {3, 2, 1}; //C B A
-    private int[] currentHand = new int[] {0, 0, 0};
+    private int[] currentHand = new int[] {1, 2, 3};
 
     // Start is called before the first frame update
     void Start()
