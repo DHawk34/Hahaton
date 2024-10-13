@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.Localization;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
@@ -100,12 +97,12 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    public void StartDialogue(StringTableCollection Dialog, bool skippable = false)
+    public void StartDialogue(LocalizedStringTable Dialog, bool skippable = false)
     {
         this.skippable = skippable;
         Show();
         currentPhrase = -1;
-        currentTable = Dialog.GetTable(LocalizationSettings.SelectedLocale.Identifier) as StringTable;
+        currentTable = Dialog.GetTable();
         entries = currentTable.SharedData.Entries;
         GetNextPhrase();
     }
