@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OpenDrawer : MonoBehaviour
 {
-    private bool haveScrewdriver = false;
+    private bool haveScrewdriver = true;
 
     [SerializeField] private GameObject drawer;
 
@@ -14,13 +14,19 @@ public class OpenDrawer : MonoBehaviour
     [SerializeField] private Sprite firstState;
     [SerializeField] private Sprite secondState;
 
+    [SerializeField] private GameObject exitButton;
+
+
     private void Awake()
     {
         spriteRenderer = drawer.GetComponent<SpriteRenderer>();
     }
     private void OnMouseDown()
     {
-        if (haveScrewdriver)
+        drawer.SetActive(true);
+        exitButton.SetActive(true);
+
+        if (!haveScrewdriver)
         {
             spriteRenderer.sprite = secondState;
         }
@@ -28,5 +34,17 @@ public class OpenDrawer : MonoBehaviour
         {
             spriteRenderer.sprite = firstState;
         }
+    }
+
+    public void ChangeSprite()
+    {
+        spriteRenderer.sprite = secondState;
+        haveScrewdriver = false;
+    }
+
+    public void exitWindow()
+    {
+        drawer.SetActive(false);
+        exitButton.SetActive(false);
     }
 }

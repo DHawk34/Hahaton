@@ -43,8 +43,8 @@ public class RoomControls : MonoBehaviour
 
         rightButton.onClick.AddListener(startGoToRight);
         leftButton.onClick.AddListener(startGoToLeft);
-        upButton.onClick.AddListener(startGoToUp);
-        downButton.onClick.AddListener(startGoToDown);
+        // upButton.onClick.AddListener(startGoToUp);
+        // downButton.onClick.AddListener(startGoToDown);
     }
     void startGoToRight()
     {
@@ -70,30 +70,6 @@ public class RoomControls : MonoBehaviour
         goToRoom(leftRoom);
         fadeInOut.FadeOut();
     }
-    void startGoToUp()
-    {
-        fadeInOut.FadeIn();
-        fadeInOut.FadeInEnded = null;
-        fadeInOut.FadeInEnded += goToUp;
-    }
-    void goToUp()
-    {
-        fadeInOut.FadeInEnded -= goToUp;
-        goToRoom(upRoom);
-        fadeInOut.FadeOut();
-    }
-    void startGoToDown()
-    {
-        fadeInOut.FadeIn();
-        fadeInOut.FadeInEnded = null;
-        fadeInOut.FadeInEnded += goToDown;
-    }
-    void goToDown()
-    {
-        fadeInOut.FadeInEnded -= goToDown;
-        goToRoom(downRoom);
-        fadeInOut.FadeOut();
-    }
 
     void goToRoom(Transform roomTransform)
     {
@@ -103,17 +79,5 @@ public class RoomControls : MonoBehaviour
             dialog.position = (Vector2)roomTransform.position;
             inventory.transform.position = (Vector2)roomTransform.position;
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
