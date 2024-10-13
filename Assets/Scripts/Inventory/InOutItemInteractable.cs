@@ -3,7 +3,6 @@ using System.Linq;
 
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem.Interactions;
 
 public class InOutItemInteractable : MonoBehaviour
 {
@@ -11,17 +10,10 @@ public class InOutItemInteractable : MonoBehaviour
     public UnityEvent action;
     public UnityEvent<int> actionInt;
 
-    public UnityEvent<int> actionRemoveInt;
-
-
     private Inventory playerInventory;
 
     private InventoryItem item;
     [SerializeField] private SpriteRenderer spriteRenderer;
-
-    [SerializeField] private Sprite sprite;
-
-    private bool slotTaken = false;
 
     void Awake()
     {
@@ -56,26 +48,13 @@ public class InOutItemInteractable : MonoBehaviour
             if (!playerInventory.TryAddItem(item))
                 return;
 
-
-            actionRemoveInt?.Invoke(item.ItemName[5] - '0');
-
             item = null;
-
             ChangeSprite();
         }
     }
 
     private void ChangeSprite()
     {
-        if (!slotTaken)
-        {
-            spriteRenderer.sprite = sprite;
-            slotTaken = true;
-        }
-        else
-        {
-            spriteRenderer.sprite = null;
-            slotTaken = false;
-        }
+        spriteRenderer.sprite = item.Sprite;
     }
 }
