@@ -16,8 +16,17 @@ public class Fuse : MonoBehaviour
     [SerializeField]
     private InOutItemInteractable slot4;
 
-    private int[] winningHand = new int[] {2, 1, 3, 4}; //B A C D
-    private int[] currentHand = new int[] {0, 0, 0, 0};
+    [SerializeField]
+    private BoxCollider2D slotCollider1;
+    [SerializeField]
+    private BoxCollider2D slotCollider2;
+    [SerializeField]
+    private BoxCollider2D slotCollider3;
+    [SerializeField]
+    private BoxCollider2D slotCollider4;
+
+    private int[] winningHand = new int[] {3, 2, 1}; //C B A
+    private int[] currentHand = new int[] {0, 0, 0};
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +34,10 @@ public class Fuse : MonoBehaviour
         slot1.actionInt.AddListener(SetFuse1);
         slot2.actionInt.AddListener(SetFuse2);
         slot3.actionInt.AddListener(SetFuse3);
-        slot4.actionInt.AddListener(SetFuse4);
+
+        slot1.actionRemoveInt.AddListener(UnSetFuse1);
+        slot2.actionRemoveInt.AddListener(UnSetFuse2);
+        slot3.actionRemoveInt.AddListener(UnSetFuse3);
 
     }
 
@@ -47,11 +59,22 @@ public class Fuse : MonoBehaviour
         CheckHand();
     }
 
-    public void SetFuse4(int id)
+    public void UnSetFuse1(int id)
     {
-        currentHand[3] = id;
+        currentHand[0] = 0;
         CheckHand();
-        
+    }
+
+    public void UnSetFuse2(int id)
+    {
+        currentHand[1] = 0;
+        CheckHand();
+    }
+
+    public void UnSetFuse3(int id)
+    {
+        currentHand[2] = 0;
+        CheckHand();
     }
 
     private void CheckHand() {
@@ -59,13 +82,18 @@ public class Fuse : MonoBehaviour
         if (Enumerable.SequenceEqual(winningHand, currentHand))
         {
             Debug.Log("Winner");
+            slotCollider1.enabled = false;
+            slotCollider2.enabled = false;
+            slotCollider3.enabled = false;
+            slotCollider4.enabled = false;
+
+            return;
         }
+
 
         Debug.Log(currentHand[0]);
         Debug.Log(currentHand[1]);
         Debug.Log(currentHand[2]);
-        Debug.Log(currentHand[3]);
-
 
     }
 
