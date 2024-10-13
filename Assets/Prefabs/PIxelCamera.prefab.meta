@@ -1,4 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+=======
+<<<<<<<< HEAD:Assets/Editor/Unified.Universal.Blur.Editor.asmdef.meta
+guid: d7091a66a69bfd14a9ae71c281774c53
+AssemblyDefinitionImporter:
+========
+>>>>>>> Stashed changes
 guid: 03ad9705e291bf04c848a9487aaa9a74
 PrefabImporter:
   externalObjects: {}
