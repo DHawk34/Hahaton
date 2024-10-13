@@ -15,7 +15,12 @@ public class Pause : MonoBehaviour
         InputManager.Input.Player.Pause.performed += togglePause;
     }
 
-    private void togglePause(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    public void togglePause(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        togglePause();
+    }
+
+    public void togglePause()
     {
         if (menu.activeSelf)
         {
@@ -33,14 +38,4 @@ public class Pause : MonoBehaviour
         }
     }
 
-    private void OnDisable()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

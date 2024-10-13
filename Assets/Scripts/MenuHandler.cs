@@ -13,12 +13,12 @@ public class MenuHandler : MonoBehaviour
     
     public void PlayGame()
     {
-        // SceneManager.LoadSceneAsync();
+        SceneManager.LoadScene("Game");
     }
 
     public void Exit()
     {
-        //
+        Application.Quit();
     }
 
     public void ToggleSettings()
