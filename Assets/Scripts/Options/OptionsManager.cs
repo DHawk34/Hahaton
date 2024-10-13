@@ -16,60 +16,31 @@ public class OptionsManager : MonoBehaviour
     [Header("Sounds")]
     [SerializeField]
     private Slider overallVolumeSlider;
-    [SerializeField]
-    private Slider sfxVolumeSlider;
-    [SerializeField]
-    private Slider voicesVolumeSlider;
-    [SerializeField]
-    private Slider musicVolumeSlider;
 
     [Header("Graphics")]
     [SerializeField]
-    private Slider framerateSlider;
-
-    [SerializeField]
-    private Toggle vsyncToggle;
+    private Slider brightnessSilder;
 
     [Header("TMP")]
     [SerializeField]
     private TextMeshProUGUI overallVolumeTMP;
 
     [SerializeField]
-    private TextMeshProUGUI sfxVolumeTMP;
+    private TextMeshProUGUI brightnessTMP;
 
-    [SerializeField]
-    private TextMeshProUGUI voicesVolumeTMP;
-
-    [SerializeField]
-    private TextMeshProUGUI musicVolumeTMP;
-    [SerializeField]
-    private TextMeshProUGUI framerateTMP;
-
-    private void Start() {
+    private void Start()
+    {
 
         gameOptions = new GameOptions();
         // SetSavedOptions();
     }
 
-
-
-    public void ToggleVSync()
+    public void SetBrightness()
     {
-        gameOptions.vsync = !gameOptions.vsync;
-        QualitySettings.vSyncCount = gameOptions.vsync ? 1 : 0;
-        PlayerPrefs.SetInt("VSync", gameOptions.vsync ? 1 : 0);
-
-        PlayerPrefs.Save();
-
-    }
-
-    public void SetFrameRate()
-    {
-        int value = (int)framerateSlider.value;
-        gameOptions.refreshRate = value;
-        Application.targetFrameRate = value;
-        framerateTMP.text = value.ToString();
-        PlayerPrefs.SetInt("FrameRate", value);
+        float value = brightnessSilder.value;
+        gameOptions.brightness = value;
+        brightnessTMP.text = (value * 100).ToString("F0");
+        PlayerPrefs.SetFloat("Brightness", value);
 
         PlayerPrefs.Save();
 
@@ -82,47 +53,10 @@ public class OptionsManager : MonoBehaviour
         float value = overallVolumeSlider.value;
 
         AudioManager.Instance.overallVolume = value;
-        overallVolumeTMP.text = value.ToString("P0");
+        overallVolumeTMP.text = (value * 100).ToString("F0");
         PlayerPrefs.SetFloat("Overall Volume", AudioManager.Instance.overallVolume);
 
         PlayerPrefs.Save();
-
-    }
-
-    public void SetSFXVolume()
-    {
-        float value = sfxVolumeSlider.value;
-        AudioManager.Instance.SFXVolume(value);
-        sfxVolumeTMP.text     = value.ToString("P0");
-        PlayerPrefs.SetFloat("SFX Volume", value);
-
-        PlayerPrefs.Save();
-
-
-    }
-
-    public void SetMusicVolume()
-    {
-        float value = musicVolumeSlider.value;
-        AudioManager.Instance.MusicVolume(value);
-        musicVolumeTMP.text   = value.ToString("P0");
-        PlayerPrefs.SetFloat("Music Volume", value);
-
-        PlayerPrefs.Save();
-
-
-    }
-
-
-    public void SetVoiceVolume()
-    {
-        float value = voicesVolumeSlider.value;
-        AudioManager.Instance.VoiceVolume(value);
-        voicesVolumeTMP.text  = value.ToString("P0");
-        PlayerPrefs.SetFloat("Voices Volume", value);
-
-        PlayerPrefs.Save();
-
 
     }
 
