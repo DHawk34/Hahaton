@@ -11,7 +11,7 @@ public class Mixer : MonoBehaviour
     [SerializeField]
     private MixerRotate mixer3;
 
-    private int[] winningHand = new int[] {300, 75, 45};
+    private int[] winningHand = new int[] {315, 90, 225};
 
 
     public void checkIfWin()
