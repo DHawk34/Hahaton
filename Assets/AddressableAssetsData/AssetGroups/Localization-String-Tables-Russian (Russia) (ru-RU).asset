@@ -17,6 +17,24 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 7159a470fbe6fe248976c566969bcf4f
   m_SerializeEntries:
+  - m_GUID: 0e04a25dafb90244fb2fa8d94211739b
+    m_Address: AI_ED_3_Background_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2cad53cd95f9f6044852b1d19cb3c931
+    m_Address: AI_PowerOn_Background_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e4e1a3b426bb744d8bc4db72dc12764
+    m_Address: AI_ED_2_Background_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 55faf16674116fc44ab295a911d80c82
     m_Address: StringExampleTable_ru-RU
     m_ReadOnly: 1
@@ -29,8 +47,50 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ru-RU
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6deaf44d5b7a37b4f9ec426dfbde7f94
+    m_Address: AI_ED_1_Background_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70d9bb1706dc2f84e9608a78950a8392
+    m_Address: AI_BodyPress_Background_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa4ef13e971726044b1d3dc07f9857db
+    m_Address: AI_PortholeLook_Background_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b12a9671ff983cb43949adc5fbcf03d0
+    m_Address: AI_PowerOnHeadPress_Background_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bfd139d1b35650c41bd71a71b5f4e375
     m_Address: Pda entries_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce7f747c537b07f4890cff0f48e2e50c
+    m_Address: AI_First_NoSkip_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dce7a813bf9d3314cbcfcde6e9b166a6
+    m_Address: AI_NoSound_Background_ru-RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru-RU
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f555c341be5b0fb40b1c9103eadbcbdc
+    m_Address: AI_HeadPress_Background_ru-RU
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru-RU

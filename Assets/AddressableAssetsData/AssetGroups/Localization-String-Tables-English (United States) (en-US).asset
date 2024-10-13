@@ -17,6 +17,30 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 8a13589bc43cdb34d84d038f9c1473d0
   m_SerializeEntries:
+  - m_GUID: 0392234da553dc54bab115874bfda523
+    m_Address: AI_ED_2_Background_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a056b1b3f090d14e86e02debde5e585
+    m_Address: AI_HeadPress_Background_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20a1678e3cd69534c812e8c6e8c0a0c4
+    m_Address: AI_PowerOnHeadPress_Background_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24274a47d8f5d0e4ab38c1a2aeed770c
+    m_Address: AI_PortholeLook_Background_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 24347949ae8fa694a80058287e74e031
     m_Address: StringExampleTable_en-US
     m_ReadOnly: 1
@@ -25,6 +49,42 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3be10b06785bd4a40b0722c44170582c
     m_Address: Pda entries_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 479f3280638f2334492fc8e829f7b531
+    m_Address: AI_PowerOn_Background_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a6518a4bb4a1fe4c8c85e42159848bf
+    m_Address: AI_First_NoSkip_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e50f4ab772622e4486e5c38e111b4fa
+    m_Address: AI_ED_1_Background_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aea575f190631ce448d7a68deed83729
+    m_Address: AI_BodyPress_Background_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b426233f3b8a21e4298154033059c0cd
+    m_Address: AI_ED_3_Background_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c8fa1379fd2605448b157f9b4b285cb9
+    m_Address: AI_NoSound_Background_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
