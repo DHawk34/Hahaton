@@ -1,14 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class InteractableGetItemFromInventory : MonoBehaviour
 {
-    [SerializeField] private string allowedItemName;
+    [SerializeField] private string[] allowedItemName;
     [SerializeField] private UnityEvent action;
+    [SerializeField] private UnityEvent<int> actionInt;
+
     private Inventory playerInventory;
 
     void Awake()
@@ -23,9 +25,9 @@ public class InteractableGetItemFromInventory : MonoBehaviour
         if (!playerInventory.TryGetActiveItem(out var item))
             return;
 
-        if (item.ItemName != allowedItemName)
+        if (!allowedItemName.Contains(item.name))
             return;
 
-        action?.Invoke();
+        actionInt?.Invoke((int)item.name[0]);
     }
 }
