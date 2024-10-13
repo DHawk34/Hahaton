@@ -275,19 +275,8 @@ MonoBehaviour:
       m_Calls: []
   actionInt:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 361228706}
-        m_TargetAssemblyTypeName: Fuse, Assembly-CSharp
-        m_MethodName: SetFuse4
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  spriteRenderer: {fileID: 2023059}
 --- !u!1 &361228704
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,10 +325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ff0c76a2c2332458d049549d1d8c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactable1: {fileID: 0}
-  interactable2: {fileID: 0}
-  interactable3: {fileID: 0}
-  interactable4: {fileID: 0}
+  slot1: {fileID: 721124822}
+  slot2: {fileID: 1612346469}
+  slot3: {fileID: 939723767}
+  slot4: {fileID: 2023061}
 --- !u!1001 &362174752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -505,19 +494,8 @@ MonoBehaviour:
       m_Calls: []
   actionInt:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 361228706}
-        m_TargetAssemblyTypeName: Fuse, Assembly-CSharp
-        m_MethodName: SetFuse1
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  spriteRenderer: {fileID: 721124821}
 --- !u!61 &721124823
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -671,19 +649,8 @@ MonoBehaviour:
       m_Calls: []
   actionInt:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 361228706}
-        m_TargetAssemblyTypeName: Fuse, Assembly-CSharp
-        m_MethodName: SetFuse3
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  spriteRenderer: {fileID: 939723766}
 --- !u!61 &939723768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -760,6 +727,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsToAdd:
   - {fileID: 11400000, guid: f72bf8fe3bc98424bbd78679d57fb8a7, type: 2}
+  - {fileID: 11400000, guid: d4326bab075978241bcf08005a51492c, type: 2}
+  - {fileID: 11400000, guid: 19ae9122853157d4591f25e970756889, type: 2}
+  - {fileID: 11400000, guid: 132f70d472e67b34f99ccf2b0474f7fc, type: 2}
 --- !u!4 &943523263
 Transform:
   m_ObjectHideFlags: 0
@@ -1111,19 +1081,8 @@ MonoBehaviour:
       m_Calls: []
   actionInt:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 361228706}
-        m_TargetAssemblyTypeName: Fuse, Assembly-CSharp
-        m_MethodName: SetFuse2
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  spriteRenderer: {fileID: 1612346468}
 --- !u!61 &1612346470
 BoxCollider2D:
   m_ObjectHideFlags: 0
