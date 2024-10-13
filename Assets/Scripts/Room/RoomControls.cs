@@ -76,8 +76,8 @@ public class RoomControls : MonoBehaviour
         if (roomTransform)
         {
             mainCamera.transform.position = (Vector2)roomTransform.position;
-            dialog.position = (Vector2)roomTransform.position;
-            inventory.transform.position = (Vector2)roomTransform.position;
+            dialog.position = new Vector3(roomTransform.position.x, roomTransform.position.y, 1f);
+            inventory.position = new Vector3(roomTransform.position.x, roomTransform.position.y, 1f);
         }
     }
 }
