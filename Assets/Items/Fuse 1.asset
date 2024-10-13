@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Fuse 1
   m_EditorClassIdentifier: 
   itemName: Fuse 1
-  sprite: {fileID: 21300000, guid: 40d24e40ef7f8ec42bf4a0dddd8ea6d3, type: 3}
-  model3D: {fileID: 919132149155446097, guid: 9abcf34c74482aa48ad153cc1bf80862, type: 3}
+  sprite: {fileID: 21300000, guid: 764b965f35d2ff541a741d2a681d9872, type: 3}
+  model3D: {fileID: 919132149155446097, guid: e5c71ffde2f73664ea533b7dc084e794, type: 3}
