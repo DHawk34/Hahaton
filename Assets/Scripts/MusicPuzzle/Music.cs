@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Music : MonoBehaviour
 {
@@ -36,8 +37,7 @@ public class Music : MonoBehaviour
 
         if (Restart == null)
             Restart = new UnityEvent();
-        
-    
+
     }
 
     public void CheckHand(int buttonId) {
@@ -73,7 +73,8 @@ public class Music : MonoBehaviour
     public void DeShowCard()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
-    }
+		SceneManager.LoadScene("Ending", LoadSceneMode.Single);
+	}
 
     private void UnableButtons()
     {

@@ -26,6 +26,8 @@ public class Mixer : MonoBehaviour
 
     private int[] winningHand = new int[] {315, 90, 225};
 
+  
+
 
     public void checkIfWin()
     {

@@ -9,6 +9,9 @@ public class Drawing : MonoBehaviour
 
     private int points = 0;
 
+    [SerializeField]
+    public PolygonCollider2D beated;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class Drawing : MonoBehaviour
     {
         if (points == 18)
         {
+            beated.enabled = true;
             Debug.Log("WinNNER");
         }
     }

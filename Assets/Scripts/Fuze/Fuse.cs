@@ -6,6 +6,11 @@ using UnityEngine;
 public class Fuse : MonoBehaviour
 {
     [SerializeField]
+    private GameObject puzzle;
+    [SerializeField]
+    private OpenPuzzle button;
+    
+    [SerializeField]
     private InOutItemInteractable slot1;
 
     [SerializeField]
@@ -87,7 +92,10 @@ public class Fuse : MonoBehaviour
             slotCollider3.enabled = false;
             slotCollider4.enabled = false;
 
-            return;
+			puzzle.SetActive(false);
+            button.state = true;
+
+			return;
         }
 
 

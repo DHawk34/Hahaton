@@ -7,16 +7,22 @@ public class OpenPuzzle : MonoBehaviour
     
     [SerializeField] private GameObject puzzle;
 
-
-
     [SerializeField] private GameObject exitButton;
+
+    public bool state = false;
+
+
 
     private void OnMouseDown()
     {
+        if (state)
+        {
+            return;
+        }
         puzzle.SetActive(true);
         exitButton.SetActive(true);
 
-    }
+	}
 
     public void exitWindow()
     {
