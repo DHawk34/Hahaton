@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Editor/Unified.Universal.Blur.Editor.asmdef.meta
-guid: 96a53531165ae4f4b92718bcb6991fe4
-AssemblyDefinitionImporter:
-========
 guid: 03ad9705e291bf04c848a9487aaa9a74
 PrefabImporter:
->>>>>>>> 6ffc48a2c6d374a10782d337834ac998043ed12b:Assets/Prefabs/PIxelCamera.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
