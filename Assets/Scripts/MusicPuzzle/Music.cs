@@ -13,7 +13,24 @@ public class Music : MonoBehaviour
     private int currentHandCounter = 0;
 
     [SerializeField]
+    private BoxCollider2D card;
+
+    [SerializeField]
+    private BoxCollider2D slot1;
+    [SerializeField]
+    private BoxCollider2D slot2;
+    [SerializeField]
+    private BoxCollider2D slot3;
+    [SerializeField]
+    private BoxCollider2D slot4;
+    [SerializeField]
+    private BoxCollider2D slot5;
+
+
+    [SerializeField]
     public Sprite[] sprites; // Массив спрайтов
+
+
 
     private void Start() {
 
@@ -36,12 +53,35 @@ public class Music : MonoBehaviour
             if (Enumerable.SequenceEqual(winningHand, currentHand))
             {
                 Debug.Log("Winner");
+                ShowCard();
+                UnableButtons();
             }
             else
             {
                 Restart.Invoke();
             }
         }
+
+    }
+
+    private void ShowCard()
+    {
+        card.enabled = true;
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[0];
+    }
+
+    public void DeShowCard()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
+    }
+
+    private void UnableButtons()
+    {
+        slot1.enabled = false;
+        slot2.enabled = false;
+        slot3.enabled = false;
+        slot4.enabled = false;
+        slot5.enabled = false;
 
     }
 }
