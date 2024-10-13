@@ -55,12 +55,12 @@ public class DialogueSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        InputManager.Input.Player.LeftClick.performed += Skip;
+        //InputManager.Input.Player.LeftClick.performed += Skip;
     }
 
     private void OnDisable()
     {
-        InputManager.Input.Player.LeftClick.performed -= Skip;
+        //InputManager.Input.Player.LeftClick.performed -= Skip;
     }
 
     private void Skip(UnityEngine.InputSystem.InputAction.CallbackContext obj)
