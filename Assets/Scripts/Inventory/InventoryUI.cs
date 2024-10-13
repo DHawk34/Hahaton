@@ -21,14 +21,14 @@ public class InventoryUI : MonoBehaviour
     {
         var icon = itemIcons[index];
         icon.sprite = item.Sprite;
-        icon.gameObject.SetActive(true);
+        ShowItemIcon(icon, true);
     }
 
     private void PlayerInventory_ItemRemoved(int index)
     {
         var icon = itemIcons[index];
         icon.sprite = null;
-        icon.gameObject.SetActive(false);
+        ShowItemIcon(icon, false);
     }
 
 
@@ -56,5 +56,13 @@ public class InventoryUI : MonoBehaviour
     public void Open3dView(int itemIndex)
     {
         playerInventory.InvokeShouldOpenItem3dViewer(itemIndex);
+    }
+
+    private void ShowItemIcon(Image icon, bool state)
+    {
+        var color = icon.color;
+        color.a = state ? 1 : 0;
+
+        icon.color = color;
     }
 }
