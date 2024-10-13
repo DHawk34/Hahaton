@@ -12,6 +12,9 @@ public class Arrows : MonoBehaviour
 
     private CellArrow[] spriteCellArrow =  new CellArrow[7];
 
+    [SerializeField]
+    private GameObject mixer;
+
     private void Start() {
         for (int i = 0; i < spriteObjects.Length; i++)
         {
@@ -108,28 +111,30 @@ public class Arrows : MonoBehaviour
 
     private void CheckIfWin()
     {
-        for (int i = 0; i < 3; i++)
-        {
-            if (spriteCellArrow[i].currentState != CellArrow.ArrowCellState.Down)
-            {
-                return;
-            }
-        }
+        // for (int i = 0; i < 3; i++)
+        // {
+        //     if (spriteCellArrow[i].currentState != CellArrow.ArrowCellState.Down)
+        //     {
+        //         return;
+        //     }
+        // }
 
-        if (spriteCellArrow[3].currentState != CellArrow.ArrowCellState.None)
-        {
-            return;
-        }
+        // if (spriteCellArrow[3].currentState != CellArrow.ArrowCellState.None)
+        // {
+        //     return;
+        // }
 
-        for (int i = 4; i < 7; i++)
-        {
-            if (spriteCellArrow[i].currentState != CellArrow.ArrowCellState.Up)
-            {
-                return;
-            }
-        }
+        // for (int i = 4; i < 7; i++)
+        // {
+        //     if (spriteCellArrow[i].currentState != CellArrow.ArrowCellState.Up)
+        //     {
+        //         return;
+        //     }
+        // }
 
-        Debug.Log("WINNER CheckER");
+        mixer.SetActive(true);
+
+        // Debug.Log("WINNER CheckER");
     }
 
     public void Restart()
