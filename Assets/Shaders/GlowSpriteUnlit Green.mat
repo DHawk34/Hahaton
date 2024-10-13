@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GlowSpriteUnlit
+  m_Name: GlowSpriteUnlit Green
   m_Shader: {fileID: -6465566751694194690, guid: cd276e8fcb04dc84c8f55ed45fe9c87f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -48,7 +48,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 18.379171, g: 0, b: 0, a: 1}
+    - _Color: {r: 2.9608474, g: 18.37917, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &7169649481416818760
 MonoBehaviour:

@@ -1391,7 +1391,7 @@ PrefabInstance:
     - target: {fileID: 1854149984433723419, guid: 0a77b7b317135f248bd45d74491bc543, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff066ff6ee0b86f47a79350695b9a1e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 441632cd8a6c32b4bb2169b6d942597a, type: 2}
     - target: {fileID: 3343049559556034338, guid: 0a77b7b317135f248bd45d74491bc543, type: 3}
       propertyPath: m_LocalPosition.x
       value: 166
@@ -2271,7 +2271,7 @@ PrefabInstance:
     - target: {fileID: 7874240246993440862, guid: 8a6e2e6d2bf3aec4a9e49299eb3797fd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff066ff6ee0b86f47a79350695b9a1e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 441632cd8a6c32b4bb2169b6d942597a, type: 2}
     - target: {fileID: 8922285651345617607, guid: 8a6e2e6d2bf3aec4a9e49299eb3797fd, type: 3}
       propertyPath: dialog
       value: 
@@ -3768,7 +3768,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.8, y: 8.8}
+    oldSize: {x: 12.4, y: 10.4}
     newSize: {x: 12, y: 8.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4271,7 +4271,7 @@ PrefabInstance:
     - target: {fileID: 7874240246993440862, guid: 8a6e2e6d2bf3aec4a9e49299eb3797fd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff066ff6ee0b86f47a79350695b9a1e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 441632cd8a6c32b4bb2169b6d942597a, type: 2}
     - target: {fileID: 8922285651345617607, guid: 8a6e2e6d2bf3aec4a9e49299eb3797fd, type: 3}
       propertyPath: dialog
       value: 
@@ -9283,7 +9283,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.2}
+    oldSize: {x: 14, y: 9.6}
     newSize: {x: 12.8, y: 8.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9291,10 +9291,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.155, y: 0.099999994}
-      - {x: -0.155, y: -0.099999994}
-      - {x: 0.155, y: -0.099999994}
-      - {x: 0.155, y: 0.099999994}
+    - - {x: -7, y: -3.6000001}
+      - {x: -6.2000003, y: -4.8}
+      - {x: 7, y: -4.8}
+      - {x: 7, y: 4.8}
+      - {x: -5.8, y: 4.8}
+      - {x: -7, y: 2.4}
   m_UseDelaunayMesh: 0
 --- !u!1 &1942393920
 GameObject:
@@ -10220,7 +10222,7 @@ PrefabInstance:
     - target: {fileID: 7874240246993440862, guid: 8a6e2e6d2bf3aec4a9e49299eb3797fd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ff066ff6ee0b86f47a79350695b9a1e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 441632cd8a6c32b4bb2169b6d942597a, type: 2}
     - target: {fileID: 8922285651345617607, guid: 8a6e2e6d2bf3aec4a9e49299eb3797fd, type: 3}
       propertyPath: dialog
       value: 
