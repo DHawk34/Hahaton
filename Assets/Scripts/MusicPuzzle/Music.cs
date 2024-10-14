@@ -73,7 +73,7 @@ public class Music : MonoBehaviour
     public void DeShowCard()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
-		SceneManager.LoadScene("Ending", LoadSceneMode.Single);
+		//SceneManager.LoadScene("Ending", LoadSceneMode.Single);
 	}
 
     private void UnableButtons()
