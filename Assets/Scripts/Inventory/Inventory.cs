@@ -21,6 +21,7 @@ public class Inventory
             return false;
 
         items.Add(item);
+        ActiveItemIndex = items.Count - 1;
         ItemAdded?.Invoke(items.Count - 1, item);
 
         return true;
@@ -31,7 +32,10 @@ public class Inventory
         bool success = items.Remove(item);
 
         if (success)
+        {
+            ActiveItemIndex = -1;
             ItemRemoved?.Invoke(items.Count);
+        }
 
         return success;
     }

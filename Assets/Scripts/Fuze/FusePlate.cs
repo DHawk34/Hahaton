@@ -5,6 +5,9 @@ using UnityEngine;
 public class FusePlate : MonoBehaviour
 {
     [SerializeField]
+    private GameObject fuseBox;
+
+    [SerializeField]
     private Animator animator;
 
     private int nailsCount = 4;
@@ -12,7 +15,7 @@ public class FusePlate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     public void MinusNail()
@@ -21,6 +24,7 @@ public class FusePlate : MonoBehaviour
 
         if (nailsCount == 0)
         {
+            fuseBox.SetActive(true);
             animator.SetTrigger("DropPlate");
         }
     }
@@ -28,6 +32,6 @@ public class FusePlate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

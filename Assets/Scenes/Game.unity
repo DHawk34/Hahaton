@@ -2134,8 +2134,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2693611197530620869, guid: 5168552a82a820d4c91023ff9ba2c347, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3576418937356940679, guid: 5168552a82a820d4c91023ff9ba2c347, type: 3}
+      propertyPath: fuseBox
+      value: 
+      objectReference: {fileID: 405630838}
     - target: {fileID: 3874015732236849500, guid: 5168552a82a820d4c91023ff9ba2c347, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.35
@@ -2366,6 +2370,11 @@ PrefabInstance:
 --- !u!4 &405630837 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6110930396941356277, guid: 5168552a82a820d4c91023ff9ba2c347, type: 3}
+  m_PrefabInstance: {fileID: 405630836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &405630838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2693611197530620869, guid: 5168552a82a820d4c91023ff9ba2c347, type: 3}
   m_PrefabInstance: {fileID: 405630836}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &423865051 stripped
