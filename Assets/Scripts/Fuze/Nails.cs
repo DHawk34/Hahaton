@@ -38,7 +38,7 @@ public class Nails : MonoBehaviour
 
         plate.MinusNail();
 
-        spriteRenderer.enabled = false;
+        this.gameObject.SetActive(false);
 
     }
 }

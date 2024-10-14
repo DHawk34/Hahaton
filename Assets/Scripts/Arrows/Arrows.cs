@@ -15,6 +15,9 @@ public class Arrows : MonoBehaviour
     [SerializeField]
     private GameObject mixer;
 
+    [SerializeField]
+    private OpenPuzzle openPuzzle;
+
     private void Start() {
         for (int i = 0; i < spriteObjects.Length; i++)
         {
@@ -133,6 +136,7 @@ public class Arrows : MonoBehaviour
         }
 
         mixer.SetActive(true);
+        openPuzzle.firstClear = true;
 
         // Debug.Log("WINNER CheckER");
     }

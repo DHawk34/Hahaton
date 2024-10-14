@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class OpenPuzzle : MonoBehaviour
 {
-    
+
     [SerializeField] private GameObject puzzle;
+
+    [SerializeField] private GameObject secondPuzzle;
 
     [SerializeField] private GameObject exitButton;
 
     public bool state = false;
+    public bool firstClear = false;
 
 
 
@@ -19,10 +22,18 @@ public class OpenPuzzle : MonoBehaviour
         {
             return;
         }
-        puzzle.SetActive(true);
+
+        if (!firstClear)
+        {
+            puzzle.SetActive(true);
+        }
+        else
+        {
+            secondPuzzle.SetActive(true);
+        }
         exitButton.SetActive(true);
 
-	}
+    }
 
     public void exitWindow()
     {

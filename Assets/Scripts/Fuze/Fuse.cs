@@ -9,7 +9,10 @@ public class Fuse : MonoBehaviour
     private GameObject puzzle;
     [SerializeField]
     private OpenPuzzle button;
-    
+
+    [SerializeField]
+    private GameObject enabladePuzzle;
+
     [SerializeField]
     private InOutItemInteractable slot1;
 
@@ -92,7 +95,10 @@ public class Fuse : MonoBehaviour
             slotCollider3.enabled = false;
             slotCollider4.enabled = false;
 
-			puzzle.SetActive(false);
+            enabladePuzzle.SetActive(true);
+
+
+            puzzle.SetActive(false);
             button.state = true;
 
 			return;
